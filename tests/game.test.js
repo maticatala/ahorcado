@@ -1,4 +1,5 @@
 const { esPalabraCorrecta } = require('../src/game.js');
+const { contieneLetra } = require('../src/game');
 
 
 describe('Juego del ahorcado', () => {
@@ -24,3 +25,24 @@ describe('Juego del ahorcado', () => {
         })
     })
 })
+
+/* TODO: */
+describe('contieneLetra()', () => {
+  test('test_arriesgar_letra_que_esta_en_la_palabra_retorna_true', () => {
+    const palabraSecreta = 'angular';
+    const letra = 'g';
+
+    const resultado = contieneLetra(palabraSecreta, letra);
+
+    expect(resultado).toBe(true);
+  });
+
+  test('test_arriesgar_letra_que_no_esta_en_la_palabra_retorna_false', () => {
+    const palabraSecreta = 'angular';
+    const letra = 'z';
+
+    const resultado = contieneLetra(palabraSecreta, letra);
+
+    expect(resultado).toBe(false);
+  });
+});

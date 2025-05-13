@@ -2,4 +2,8 @@ function esPalabraCorrecta(palabraSecreta, intento) {
   return palabraSecreta === intento;
 }
 
-module.exports = { esPalabraCorrecta };
+function contieneLetra() {
+  return false;
+}
+
+module.exports = { esPalabraCorrecta, contieneLetra };
