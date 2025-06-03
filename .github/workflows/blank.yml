@@ -34,10 +34,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      # Run tests
-      - name: Run tests
-        run: npm test:coverage
-
+      # Run tests with coverage
+      - name: Run tests with coverage
+        run: npm run test:coverage
+      
       # Upload coverage reports to GitHub
       - name: Upload coverage reports
         uses: actions/upload-artifact@v4
