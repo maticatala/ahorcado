@@ -1,5 +1,6 @@
 const { esPalabraCorrecta } = require('../src/game.js');
 const { contieneLetra } = require('../src/game');
+const { mostrarProgreso } = require('../src/game');
 
 
 describe('Juego del ahorcado', () => {
@@ -55,5 +56,28 @@ describe('Juego del ahorcado', () => {
       expect(resultado).toBe(false);
     });
   });
+
+  describe('mostrarProgreso()', () => {
+    test('retorna todos guiones si no se adivinó ninguna letra', () => {
+        const palabraSecreta = 'gato';
+        const letrasAdivinadas = [];
+        const resultado = mostrarProgreso(palabraSecreta, letrasAdivinadas);
+        expect(resultado).toBe('_ _ _ _');
+    });
+
+    test('muestra solo las letras adivinadas correctamente', () => {
+        const palabraSecreta = 'gato';
+        const letrasAdivinadas = ['a', 't'];
+        const resultado = mostrarProgreso(palabraSecreta, letrasAdivinadas);
+        expect(resultado).toBe('_ a t _');
+    });
+
+    test('muestra la palabra completa si todas las letras fueron adivinadas', () => {
+        const palabraSecreta = 'gato';
+        const letrasAdivinadas = ['g', 'a', 't', 'o'];
+        const resultado = mostrarProgreso(palabraSecreta, letrasAdivinadas);
+        expect(resultado).toBe('g a t o');
+    });
+   });
     
 })

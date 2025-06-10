@@ -6,4 +6,11 @@ function contieneLetra(palabraSecreta, letra) {
   return palabraSecreta.includes(letra);
 }
 
-module.exports = { esPalabraCorrecta, contieneLetra };
+function mostrarProgreso(palabraSecreta, letrasAdivinadas) {
+  return palabraSecreta
+    .split('')
+    .map(letra => letrasAdivinadas.includes(letra) ? letra : '_')
+    .join(' ');
+}
+
+module.exports = { esPalabraCorrecta, contieneLetra, mostrarProgreso };
