@@ -13,4 +13,10 @@ function mostrarProgreso(palabraSecreta, letrasAdivinadas) {
     .join(' ');
 }
 
-module.exports = { esPalabraCorrecta, contieneLetra, mostrarProgreso };
+function seleccionarPalabraAleatoria(diccionario) {
+  if (!diccionario.length) return undefined;
+  const indice = Math.floor(Math.random() * diccionario.length);
+  return diccionario[indice];
+}
+
+module.exports = { esPalabraCorrecta, contieneLetra, mostrarProgreso, seleccionarPalabraAleatoria };

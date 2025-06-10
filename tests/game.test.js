@@ -1,6 +1,7 @@
 const { esPalabraCorrecta } = require('../src/game.js');
 const { contieneLetra } = require('../src/game');
 const { mostrarProgreso } = require('../src/game');
+const { seleccionarPalabraAleatoria } = require('../src/game');
 
 
 describe('Juego del ahorcado', () => {
@@ -79,5 +80,19 @@ describe('Juego del ahorcado', () => {
         expect(resultado).toBe('g a t o');
     });
    });
+
+       describe('seleccionarPalabraAleatoria()', () => {
+        test('devuelve una palabra del diccionario', () => {
+            const diccionario = ['javascript', 'angular', 'node', 'react'];
+            const palabra = seleccionarPalabraAleatoria(diccionario);
+            expect(diccionario).toContain(palabra);
+        });
+
+        test('devuelve undefined si el diccionario está vacío', () => {
+            const diccionario = [];
+            const palabra = seleccionarPalabraAleatoria(diccionario);
+            expect(palabra).toBeUndefined();
+        });
+    });
     
 })
