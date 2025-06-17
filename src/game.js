@@ -1,8 +1,9 @@
 function esPalabraCorrecta(palabraSecreta, intento) {
   return palabraSecreta === intento;
 }
+
 function contieneLetra(palabraSecreta, letra) {
-  if (!letra) return false; // evita letras vacías, null, undefined
+  if (!letra) return false;
   return palabraSecreta.includes(letra);
 }
 
@@ -19,4 +20,9 @@ function seleccionarPalabraAleatoria(diccionario) {
   return diccionario[indice];
 }
 
-module.exports = { esPalabraCorrecta, contieneLetra, mostrarProgreso, seleccionarPalabraAleatoria };
+module.exports = {
+  esPalabraCorrecta,
+  contieneLetra,
+  mostrarProgreso,
+  seleccionarPalabraAleatoria
+};

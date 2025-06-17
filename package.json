@@ -1,15 +1,16 @@
 {
   "name": "ahorcado",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000a\u0000h\u0000o\u0000r\u0000c\u0000a\u0000d\u0000o\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "Implentación del juego del ahorcado en JavaScript",
+  "main": "src/main.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "start": "node src/main.js"
   },
   "keywords": [],
   "author": "",
