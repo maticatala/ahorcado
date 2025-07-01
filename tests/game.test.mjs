@@ -1,8 +1,14 @@
-const { esPalabraCorrecta } = require('../src/game.js');
-const { contieneLetra } = require('../src/game');
-const { mostrarProgreso } = require('../src/game');
-const { seleccionarPalabraAleatoria } = require('../src/game');
+// const { esPalabraCorrecta } = require('../src/game.js');
+// const { contieneLetra } = require('../src/game');
+// const { mostrarProgreso } = require('../src/game');
+// const { seleccionarPalabraAleatoria } = require('../src/game');
 
+import {
+  seleccionarPalabraAleatoria,
+  contieneLetra,
+  esPalabraCorrecta,
+  mostrarProgreso
+} from '../src/game.js';
 
 describe('Juego del ahorcado', () => {
     
