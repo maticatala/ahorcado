@@ -1,3 +1,7 @@
+/**
+ * Juego del Ahorcado en consola
+ * Este script permite jugar al ahorcado en la consola de Node.js.
+ */
 const readline = require('readline');
 const {
   seleccionarPalabraAleatoria,
@@ -7,7 +11,7 @@ const {
 } = require('./game');
 
 // Diccionario de palabras
-const diccionario = ['javascript', 'react', 'angular', 'node', 'express'];
+export const diccionario = ['javascript', 'react', 'angular', 'node', 'express'];
 
 // Palabra secreta
 let palabraSecreta = seleccionarPalabraAleatoria(diccionario);
@@ -34,7 +38,7 @@ function restart() {
   letrasAdivinadas = [];
 }
 
-// Función principal del juego
+// Función principal del juego con UI por consola
 function jugar() {
   if (intentosRestantes <= 0) {
     console.log('\n¡Perdiste! La palabra era:', palabraSecreta);

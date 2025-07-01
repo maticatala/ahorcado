@@ -10,7 +10,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "start": "node src/main.js"
+    "start": "npx serve src"
   },
   "keywords": [],
   "author": "",

@@ -20,9 +20,18 @@ function seleccionarPalabraAleatoria(diccionario) {
   return diccionario[indice];
 }
 
-module.exports = {
+export {
   esPalabraCorrecta,
   contieneLetra,
   mostrarProgreso,
   seleccionarPalabraAleatoria
 };
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  module.exports = {
+    esPalabraCorrecta,
+    contieneLetra,
+    mostrarProgreso,
+    seleccionarPalabraAleatoria
+  };
+}
