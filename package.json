@@ -10,7 +10,7 @@
   "scripts": {
     "test:acceptance": "cucumber-js",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
     "test:watch": "jest --watch",
     "start": "npx serve src"
   },
