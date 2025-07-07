@@ -15,55 +15,33 @@
         <main class="game-container">
             <div class="hangman-drawing">
                 <svg width="200" height="250" class="gallows">
-                    <!-- Base -->
                     <line x1="10" y1="230" x2="150" y2="230" stroke="#8B4513" stroke-width="4"/>
-                    <!-- Pole -->
                     <line x1="30" y1="230" x2="30" y2="20" stroke="#8B4513" stroke-width="4"/>
-                    <!-- Top beam -->
                     <line x1="30" y1="20" x2="120" y2="20" stroke="#8B4513" stroke-width="4"/>
-                    <!-- Noose -->
                     <line x1="120" y1="20" x2="120" y2="50" stroke="#8B4513" stroke-width="4"/>
-                    
-                    <!-- Head -->
                     <circle id="head" cx="120" cy="70" r="20" stroke="#000" stroke-width="2" fill="none" class="body-part hidden"/>
-                    <!-- Body -->
                     <line id="body" x1="120" y1="90" x2="120" y2="170" stroke="#000" stroke-width="2" class="body-part hidden"/>
-                    <!-- Left arm -->
                     <line id="leftArm" x1="120" y1="120" x2="90" y2="140" stroke="#000" stroke-width="2" class="body-part hidden"/>
-                    <!-- Right arm -->
                     <line id="rightArm" x1="120" y1="120" x2="150" y2="140" stroke="#000" stroke-width="2" class="body-part hidden"/>
-                    <!-- Left leg -->
                     <line id="leftLeg" x1="120" y1="170" x2="90" y2="200" stroke="#000" stroke-width="2" class="body-part hidden"/>
-                    <!-- Right leg -->
                     <line id="rightLeg" x1="120" y1="170" x2="150" y2="200" stroke="#000" stroke-width="2" class="body-part hidden"/>
                 </svg>
             </div>
-            
             <div class="game-info">
                 <div class="word-display">
                     <h2 id="wordProgress">_ _ _ _ _ _ _ _ _ _</h2>
                 </div>
-                
                 <div class="game-stats">
                     <p id="attemptsLeft">Intentos restantes: <span class="attempts-count">6</span></p>
                     <p id="usedLetters">Letras usadas: <span class="letters-list"></span></p>
-                </div>
-                
+                </div> 
                 <div class="input-section">
-                    <input 
-                        type="text" 
-                        id="guessInput" 
-                        placeholder="Ingresa una letra o palabra completa"
-                        maxlength="20"
-                        autocomplete="off"
-                    >
+                    <input type="text" id="guessInput" placeholder="Ingresa una letra o palabra completa" maxlength="20" autocomplete="off">
                     <button id="guessButton">Adivinar</button>
-                </div>
-                
+                </div>   
                 <div class="message-area">
                     <p id="gameMessage"></p>
-                </div>
-                
+                </div>          
                 <div class="controls">
                     <button id="restartButton">🔄 Reiniciar Juego</button>
                     <p class="hint">💡 Tip: Escribe "*" para reiniciar rápidamente</p>
@@ -71,7 +49,6 @@
             </div>
         </main>
     </div>
-    
     <script type="module" src="script.js"></script>
 </body>
 </html>
