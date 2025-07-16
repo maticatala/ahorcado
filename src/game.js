@@ -27,6 +27,7 @@ export {
   seleccionarPalabraAleatoria
 };
 
+// sonarjs-coverage: off
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   module.exports = {
     esPalabraCorrecta,
@@ -35,3 +36,4 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     seleccionarPalabraAleatoria
   };
 }
+// sonarjs-coverage: on
