@@ -26,14 +26,3 @@ export {
   mostrarProgreso,
   seleccionarPalabraAleatoria
 };
-
-// sonarjs-coverage: off
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-  module.exports = {
-    esPalabraCorrecta,
-    contieneLetra,
-    mostrarProgreso,
-    seleccionarPalabraAleatoria
-  };
-}
-// sonarjs-coverage: on
