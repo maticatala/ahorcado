@@ -9,7 +9,6 @@
   "type": "module",
   "homepage": "https://maticatala.github.io/ahorcado",
   "scripts": {
-    "deploy": "gh-pages -d src",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
     "test:watch": "jest --watch",
