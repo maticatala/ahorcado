@@ -6,7 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1c3e35 0%, #99f2d1 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -19,8 +19,8 @@ body {
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  max-width: 800px;
-  width: 90%;
+  /* max-width: 800px;
+  width: 90%; */
   margin: 1rem;
 }
 
@@ -34,7 +34,7 @@ header h1 {
 
 .game-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 300px max-content;
   gap: 2rem;
   align-items: start;
 }
@@ -77,6 +77,9 @@ header h1 {
   padding: 1.5rem;
   border-radius: 15px;
   border: 2px solid #e2e8f0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .word-display h2 {
