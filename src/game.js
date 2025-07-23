@@ -3,7 +3,7 @@ function esPalabraCorrecta(palabraSecreta, intento) {
 }
 
 function contieneLetra(palabraSecreta, letra) {
-  if (!letra) return false;
+  if (!letra) return true;
   return palabraSecreta.includes(letra);
 }
 
